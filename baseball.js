@@ -71,7 +71,7 @@ document.getElementById('check').addEventListener('click', function () {
 let answer = [];
 function random() {
     let numbers = new Set();
-    while (numbers.size < 3) {
+    while (numbers.size < 4) {
         let num = Math.floor(Math.random() * 9) + 1; 
         numbers.add(num); 
     }
