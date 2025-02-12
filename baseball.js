@@ -6,10 +6,10 @@
 
 
 // 게임시작 버튼 클릭
-let life_count = 5;
+let life_count = 7;
 let start = document.getElementById("start");
 start.addEventListener('click', function () {
-    alert("게임을 시작합니다. \n게임방법 : 10번 안에 3개의 숫자를 맞춰 성공하세요. \n3개의 숫자는 중복되지 않습니다.");
+    alert("게임을 시작합니다. \n게임방법 : 10번 안에 4개의 숫자를 맞춰 성공하세요. \n4개의 숫자는 중복되지 않습니다.");
     start.style.display = "none";
     GameStart();
 });
@@ -27,7 +27,7 @@ function GameStart() {
 
 // 게임오버
 function GameOver() {
-    alert("Game Over!!! 정답은 : " + answer + " 입니다.");
+    alert("Game Over!!! 정답은 : " + answer.join("") + " 입니다.");
     location.reload();
 }
 
@@ -40,7 +40,7 @@ document.getElementById('check').addEventListener('click', function () {
 
     let strike = 0;
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
         if (text[i].value == "" || text[i].value == null) {
             alert("숫자가 입력되지 않았습니다.");
             return;
@@ -56,7 +56,7 @@ document.getElementById('check').addEventListener('click', function () {
         history.appendChild(li);
         li.innerHTML += text[i].value + " ";
     }
-    if(strike == 3){
+    if(strike == 4){
         alert("정답입니다. 게임을 종료합니다.");
         location.reload();
     }
