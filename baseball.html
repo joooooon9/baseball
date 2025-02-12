@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            margin: 0; padding: 0;
+        }
+        .game-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .game-con{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        #how{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .life-text{
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 40px;
+        }
+        input[type="text"] {
+            height: 150px;
+            width: 150px;
+            font-size: 130px;
+            text-align: center;
+        }
+        .text-area{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 500px;
+        }
+        .mypick{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #history{
+            display: none;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+        .tool{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
+        #start,#check{
+            height: 70px;
+        }
+        #check{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-con">
+            <h1>⚾숫자야구⚾</h1>
+            <div id="how">Strike: 🟩 Ball: 🟨 Out: ⬜</div>
+            <div class="life-text">남은 횟수 : <span id="life">10</span></div>
+            <div class="text-area">
+                <input  type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input  type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input  type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="mypick">
+                <div id="history">입력한 값:
+                </div>
+            </div>
+        </div>
+        <div class="tool">
+            <button id="check">제출</button>
+            <button id="start">게임시작</button>
+        </div>
+    </div>
+    <script src="baseball.js"></script>
+</body>
+</html>
