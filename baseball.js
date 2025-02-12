@@ -6,7 +6,7 @@
 
 
 // 게임시작 버튼 클릭
-let life_count = 10;
+let life_count = 5;
 let start = document.getElementById("start");
 start.addEventListener('click', function () {
     alert("게임을 시작합니다. \n게임방법 : 10번 안에 3개의 숫자를 맞춰 성공하세요. \n3개의 숫자는 중복되지 않습니다.");
