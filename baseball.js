@@ -9,7 +9,7 @@
 let life_count = 7;
 let start = document.getElementById("start");
 start.addEventListener('click', function () {
-    alert("게임을 시작합니다. \n게임방법 : 10번 안에 4개의 숫자를 맞춰 성공하세요. \n4개의 숫자는 중복되지 않습니다.");
+    alert("게임을 시작합니다. \n게임방법 : 7번 안에 4개의 숫자를 맞춰 성공하세요. \n4개의 숫자는 중복되지 않습니다.");
     start.style.display = "none";
     GameStart();
 });
